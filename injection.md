@@ -1,8 +1,9 @@
 # Bit flip injection
-
+```
 model file : /home/debian/tengine/models/resnet18-cifar10_int8.tmfile
 image file : /home/debian/tengine/images/CIFAR-10-images/test/ship/0000.jpg
 img_h, img_w, scale[3], mean[3] : 32 32 , 1.000 1.000 1.000, 104.0 116.7 122.7
+```
 
 im fault_data fault_select sel_a sel_b
 fault_data - what to inject
