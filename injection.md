@@ -6,7 +6,9 @@ img_h, img_w, scale[3], mean[3] : 32 32 , 1.000 1.000 1.000, 104.0 116.7 122.7
 ```
 
 im fault_data fault_select sel_a sel_b
+
 fault_data - what to inject
+
 fault_select - what bits to inject
 
 
