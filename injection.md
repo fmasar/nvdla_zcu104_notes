@@ -5,10 +5,14 @@ image file : /home/debian/tengine/images/CIFAR-10-images/test/ship/0000.jpg
 img_h, img_w, scale[3], mean[3] : 32 32 , 1.000 1.000 1.000, 104.0 116.7 122.7
 
 im fault_data fault_select sel_a sel_b
+fault_data - what to inject
+fault_select - what bits to inject
+
 
 fault_data is 18 bit so 0x20000 should force sign to specific.
 
 #### sudo im 0x0 0x0 0x0 0x0
+```
 Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 --------------------------------------
 21.788027, 8
@@ -17,8 +21,10 @@ Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 1.613928, 0
 -1.613928, 3
 --------------------------------------
+```
 
 #### sudo im 0x0 0x00000001 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 --------------------------------------
 21.989769, 8
@@ -27,8 +33,10 @@ Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 1.613928, 0
 -1.613928, 3
 --------------------------------------
+```
 
 #### sudo im 0x0 0xFFFFFFFF 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 5.47 ms, max_time 5.47 ms, min_time 5.47 ms
 --------------------------------------
 15.735798, 8
@@ -37,8 +45,10 @@ Repeat 1 times, thread 1, avg time 5.47 ms, max_time 5.47 ms, min_time 5.47 ms
 1.412187, 6
 -1.210446, 2
 --------------------------------------
+```
 
 #### sudo im 0x8000 0xFFFFFFFF 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 4.85 ms, max_time 4.85 ms, min_time 4.85 ms
 --------------------------------------
 25.621107, 0
@@ -47,8 +57,10 @@ Repeat 1 times, thread 1, avg time 4.85 ms, max_time 4.85 ms, min_time 4.85 ms
 25.621107, 9
 25.621107, 8
 --------------------------------------
+```
 
 #### sudo im 0x8000 0x8000 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 4.76 ms, max_time 4.76 ms, min_time 4.76 ms
 --------------------------------------
 25.621107, 0
@@ -57,9 +69,11 @@ Repeat 1 times, thread 1, avg time 4.76 ms, max_time 4.76 ms, min_time 4.76 ms
 25.621107, 8
 22.998474, 9
 --------------------------------------
+```
 
 
 #### sudo im 0x80 0x80 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 4.97 ms, max_time 4.97 ms, min_time 4.97 ms
 --------------------------------------
 25.621107, 8
@@ -68,8 +82,10 @@ Repeat 1 times, thread 1, avg time 4.97 ms, max_time 4.97 ms, min_time 4.97 ms
 8.876604, 0
 -1.412187, 6
 --------------------------------------
+```
 
 #### sudo im 0x8 0x8 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 5.48 ms, max_time 5.48 ms, min_time 5.48 ms
 --------------------------------------
 22.998474, 8
@@ -78,8 +94,10 @@ Repeat 1 times, thread 1, avg time 5.48 ms, max_time 5.48 ms, min_time 5.48 ms
 1.815669, 0
 -3.026115, 9
 --------------------------------------
+```
 
 #### sudo im 0x8 0xFFFFFFFF 0x1 0x0
+```
 Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 --------------------------------------
 16.946243, 8
@@ -88,8 +106,10 @@ Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 1.008705, 6
 -0.605223, 2
 --------------------------------------
+```
 
 #### sudo im 0x8 0x8 0x4 0x0
+```
 Repeat 1 times, thread 1, avg time 5.46 ms, max_time 5.46 ms, min_time 5.46 ms
 --------------------------------------
 23.603697, 8
@@ -98,8 +118,10 @@ Repeat 1 times, thread 1, avg time 5.46 ms, max_time 5.46 ms, min_time 5.46 ms
 1.613928, 0
 -3.026115, 3
 --------------------------------------
+```
 
 #### sudo im 0x8 0x8 0x800 0x0
+```
 Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 --------------------------------------
 22.998474, 8
@@ -108,8 +130,10 @@ Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 1.613928, 6
 -1.815669, 3
 --------------------------------------
+```
 
 #### sudo im 0x8 0x8 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.76 ms, max_time 4.76 ms, min_time 4.76 ms
 --------------------------------------
 23.401955, 8
@@ -118,8 +142,10 @@ Repeat 1 times, thread 1, avg time 4.76 ms, max_time 4.76 ms, min_time 4.76 ms
 1.210446, 0
 -2.017410, 3
 --------------------------------------
+```
 
 #### sudo im 0x800 0x800 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 --------------------------------------
 25.621107, 8
@@ -128,8 +154,10 @@ Repeat 1 times, thread 1, avg time 4.81 ms, max_time 4.81 ms, min_time 4.81 ms
 -4.438302, 4
 -8.876604, 6
 --------------------------------------
+```
 
 #### sudo im 0x0 0x20000 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.79 ms, max_time 4.79 ms, min_time 4.79 ms
 --------------------------------------
 25.621107, 8
@@ -138,8 +166,10 @@ Repeat 1 times, thread 1, avg time 4.79 ms, max_time 4.79 ms, min_time 4.79 ms
 25.621107, 6
 25.621107, 5
 --------------------------------------
+```
 
 #### sudo im 0x20000 0x20000 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 --------------------------------------
 9.078344, 1
@@ -148,8 +178,10 @@ Repeat 1 times, thread 1, avg time 4.83 ms, max_time 4.83 ms, min_time 4.83 ms
 0.000000, 9
 -0.201741, 8
 --------------------------------------
+```
 
 #### sudo im 0x80 0xff 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.82 ms, max_time 4.82 ms, min_time 4.82 ms
 --------------------------------------
 25.621107, 8
@@ -158,8 +190,10 @@ Repeat 1 times, thread 1, avg time 4.82 ms, max_time 4.82 ms, min_time 4.82 ms
 1.613928, 4
 -5.447007, 3
 --------------------------------------
+```
 
 #### sudo im 0x20 0xff 0x0 0x800
+```
 Repeat 1 times, thread 1, avg time 4.80 ms, max_time 4.80 ms, min_time 4.80 ms
 --------------------------------------
 23.200214, 8
@@ -168,3 +202,4 @@ Repeat 1 times, thread 1, avg time 4.80 ms, max_time 4.80 ms, min_time 4.80 ms
 1.815669, 0
 -1.008705, 3
 --------------------------------------
+```
